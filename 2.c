@@ -1,18 +1,15 @@
 #include <stdio.h>
-void atualizaNota(float *nota){
-    if (*nota + 0.5 < 10){
-        *nota += 0.5;
-    }
-    else if (*nota + 0.5 >=10){
-        *nota = 10;
-    }
+void troca (int *a, int *b){
+    int temp;
+    temp= *a;
+    *a= *b;
+    *b= temp;
 }
-
-int main(){
-    float nota;
-    printf ("digite a nota: ");
-    scanf ("%f", &nota);
-    atualizaNota(&nota);
-    printf("a nota atualizadas eh: %f\n", nota);
+int main (){
+    int a, b;
+    printf("digite os valores de a e b: ");
+    scanf("%d %d", &a, &b);
+    troca (&a, &b);
+    printf("os numeros com a ordem trocada eh: %d %d\n", a, b);
     return 0;
 }
